@@ -1,0 +1,82 @@
+
+.admin-page {
+  background:  #7e1108;
+  padding: 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+.admin-page h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.admin-page .admin-add-product,
+.admin-page table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.admin-page input, .admin-page select, .admin-page textarea {
+  width: calc(100% - 24px);
+  padding: 10px;
+  margin: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.admin-page button {
+  padding: 10px 20px;
+  background-color:  #7e1108;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-page button:hover {
+  background-color: #6a0f07;
+}
+
+.admin-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-page th, .admin-page td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.admin-page th {
+  background-color: #f4f4f4;
+}
+
+.admin-page tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-page tr:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #7e1108;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #6a0f07;
+}
