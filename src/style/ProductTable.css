@@ -3,13 +3,13 @@
   width: 100%;
   margin: 20px auto;
   text-align: center;
-  color: #FFFFF;
+
 }
 
 .product-table h2 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #FFFFF;
+
 }
 
 .product-table table {
@@ -26,13 +26,8 @@
   background-color: #7e1108;
 }
 
-.product-table tr:nth-child(even) {
-  background-color: #7e1108;
-}
 
-.product-table tr:hover {
-  background-color: #6a0f07;
-}
+
 
 .admin-login-button {
   display: inline-block;

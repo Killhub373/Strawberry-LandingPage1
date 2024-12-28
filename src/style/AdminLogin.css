@@ -1,11 +1,11 @@
 
+
 .admin-login {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
-  background-size: cover;
+
 }
 
 .admin-login-form {
@@ -32,7 +32,7 @@
 
 .admin-login-form button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #7e1108;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -40,5 +40,5 @@
 }
 
 .admin-login-form button:hover {
-  background-color: #0056b3;
+  background-color: #7e1108;
 }

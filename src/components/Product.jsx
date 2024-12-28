@@ -66,7 +66,8 @@ const Product = () => {
   };
 
   const handleConfirmPurchase = () => {
-    axios.post('/api/update-stock', { purchasedItem: formData.purchasedItem, quantity })
+    const productId = 1; 
+    axios.put(`http://localhost:2026/api/barang/${productId}/buy?quantity=${quantity}`) 
       .then(response => {
         setShowSummary(false);
         Swal.fire('Pembelian berhasil!', 'Pesanan Anda telah diterima.', 'success');
@@ -105,8 +106,8 @@ const Product = () => {
         <img src={MapImg} alt="World Map" className="w-60 h-40 mr-6 mb-4 md:mb-0" />
         <div className="info-text text-md">
           <h2 data-aos="zoom-in" data-aos-duration="500" className="text-2xl font-bold mb-2 text-secondary">Habitat Alami Strawberry</h2>
-          <p data-aos="fade-left" data-aos-duration="600">Strawberi tumbuh subur di daerah yang memiliki iklim sejuk dengan sinar matahari yang cukup, tanah kaya bahan organik, serta drainase yang baik. Tanaman ini memerlukan tanah berpasir lempung yang subur dengan kelembaban yang cukup, tetapi tidak tergenang. </p>
-          <p data-aos="fade-left" data-aos-duration="600">Habitat alami stroberi mencakup area dataran tinggi dengan suhu udara yang lebih rendah, paparan sinar matahari langsung minimal 6-8 jam per hari, dan tanah yang kaya nutrisi. Tanaman ini juga membutuhkan musim dingin yang cukup panjang untuk periode dormansi, penting bagi siklus hidup stroberi. </p>
+          <p data-aos="fade-left" data-aos-duration="600">Strawberry tumbuh subur di daerah yang memiliki iklim sejuk dengan sinar matahari yang cukup, tanah kaya bahan organik, serta drainase yang baik. Tanaman ini memerlukan tanah berpasir lempung yang subur dengan kelembaban yang cukup, tetapi tidak tergenang.</p>
+          <p data-aos="fade-left" data-aos-duration="600">Habitat alami stroberry mencakup area dataran tinggi dengan suhu udara yang lebih rendah, paparan sinar matahari langsung minimal 6-8 jam per hari, dan tanah yang kaya nutrisi. Tanaman ini juga membutuhkan musim dingin yang cukup panjang untuk periode dormansi, penting bagi siklus hidup stroberi. </p>
         </div>
       </div>
       <div data-aos="zoom-in" data-aos-duration="500" className="product mt-6">
@@ -168,7 +169,7 @@ const Product = () => {
                 <label htmlFor="address">Alamat:</label>
                 <input
                   type="text"
-                  id="address"
+                                    id="address"
                   name="address"
                   value={formData.address}
                   onChange={handleFormChange}
@@ -222,7 +223,7 @@ const Product = () => {
                   <option value="transfer">Transfer Bank</option>
                   <option value="credit-card">Kartu Kredit</option>
                   <option value="paypal">PayPal</option>
-				                <option value="cod">Cash On Delivery (COD)</option>
+		  <option value="cod">Cash On Delivery (COD)</option>
                 </select>
               </div>
               <div className="form-group">
@@ -269,3 +270,4 @@ const Product = () => {
 };
 
 export default Product;
+

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 import '../style/AdminPage.css';
 
 const AdminPage = () => {
@@ -51,22 +53,32 @@ const AdminPage = () => {
             tanggalKadaluarsa: '',
             deskripsiBarang: '',
           });
+          Swal.fire('Berhasil', 'Barang berhasil ditambahkan!', 'success');
         } else {
           console.error('Error adding the product:', response.data);
         }
       })
       .catch(error => {
         console.error('There was an error adding the product!', error);
+        Swal.fire('Gagal', 'Terjadi kesalahan saat menambahkan barang.', 'error');
       });
   };
 
   const handleDeleteProduct = (id) => {
-    axios.delete(`http://localhost:2026/api/barang/delete/${id}`)
-      .then(() => {
-        setProducts(products.filter(product => product.id !== id));
+    console.log(`Deleting product with id: ${id}`);
+    axios.delete(`http://localhost:2026/api/barang/${id}`)
+      .then(response => {
+        if (response.data.data && response.data.data.Deleted) {
+          setProducts(products.filter(product => product.id !== id));
+          Swal.fire('Berhasil', 'Barang berhasil dihapus!', 'success');
+        } else {
+          console.error('Error deleting the product:', response.data);
+          Swal.fire('Gagal', 'Terjadi kesalahan saat menghapus barang.', 'error');
+        }
       })
       .catch(error => {
         console.error('There was an error deleting the product!', error);
+        Swal.fire('Gagal', 'Terjadi kesalahan saat menghapus barang.', 'error');
       });
   };
 
@@ -103,6 +115,7 @@ const AdminPage = () => {
             value={newProduct.stokBarang}
             onChange={handleInputChange}
             placeholder="Stok Barang"
+            className="wide-input"
           />
           <input
             type="number"
@@ -110,6 +123,7 @@ const AdminPage = () => {
             value={newProduct.hargaBarang}
             onChange={handleInputChange}
             placeholder="Harga Barang"
+            className="wide-input"
           />
           <input
             type="date"
@@ -127,6 +141,7 @@ const AdminPage = () => {
           <button onClick={handleAddProduct}>Tambah Barang</button>
         </div>
       </div>
+      <h3>Daftar Barang</h3>
       <table>
         <thead>
           <tr>
@@ -163,6 +178,7 @@ const AdminPage = () => {
           )}
         </tbody>
       </table>
+      <Link to="/home" className="home-button">Kembali ke Halaman Utama</Link>
     </div>
   );
 };

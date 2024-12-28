@@ -1,22 +1,18 @@
-
 .admin-page {
-  background:  #7e1108;
   padding: 20px;
   min-height: 100vh;
-  color: #333;
 }
 
 .admin-page h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  font-weight: bold;
-  color: #fff;
+  color: #980a07;
   text-align: center;
 }
 
 .admin-page .admin-add-product,
 .admin-page table {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -31,9 +27,14 @@
   border: 1px solid #ddd;
 }
 
+.admin-page .wide-input {
+  width: 30px; 
+  width: 95%; 
+}
+
 .admin-page button {
   padding: 10px 20px;
-  background-color:  #7e1108;
+  background-color: #d22715;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -41,7 +42,7 @@
 }
 
 .admin-page button:hover {
-  background-color: #6a0f07;
+  background-color: #980a07;
 }
 
 .admin-page table {
@@ -78,5 +79,20 @@
 }
 
 .delete-button:hover {
-  background-color: #6a0f07;
+  background-color: #980a07;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #7e1108;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #d22715;
 }

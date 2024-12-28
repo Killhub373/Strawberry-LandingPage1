@@ -5,7 +5,7 @@ import footerLogo from "../assets/orgu.png";
 const Footer = () => {
   return (
     <div  data-aos="fade-up" data-aos-duration="300" id="about" className="bg-primaryDark">
-      <section className="max-w-[1200px] mx-auto">
+      <section className="max-w-[1400px] mx-auto">
         <div className="grid md:grid-cols-3 py-5">
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 text-white">

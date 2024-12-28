@@ -44,7 +44,7 @@ const Hero = () => {
               <p data-aos="fade-up" data-aos-delay="300" className="text-sm">
                 Strawberry yang kita makan sebenarnya adalah pangkal bunga, bukan buah sejati. Meski disebut beri, secara botani stroberi bukan bagian dari keluarga buah beri. Nama ilmiahnya adalah Fragaria × ananassa var duchesne.
               </p>
-              <a href="#Product-section">
+              <a href="#products">
               <button
                 data-aos="fade-up"
                 data-aos-delay="500"
